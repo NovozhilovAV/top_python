@@ -30,15 +30,6 @@ soup = BeautifulSoup(wiki_html, 'html.parser')
 # soup = BeautifulSoup(src, 'html.parser')    # если будем работать с файлом а не с сайтом
 # получаем все теги <a> содержащие ссылки href
 all_a = soup.find_all('a')
-# print(all_a)
-# переберем все полученные ссылки и выведем их в каждой строке
-# for hr in all_a:
-#         hr_text = hr.text
-#         # hr_url = hr.get('href')    # выведет все ссылки содержащиеся в href
-#         hr_url = 'https://ru.m.wikipedia.org' +  hr.get('href')    # добавили доменное имя - так отображается корректнее
-#         # hr_url = hr['href']    # так тоже можно указать
-#         # print(hr_text)
-#         print(f'{hr.text}: {hr_url}')
 
 # заносим данные в словарь
 all_link = {}
