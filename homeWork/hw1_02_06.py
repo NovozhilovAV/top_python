@@ -39,17 +39,43 @@ print('И снова здравствуйте')
 # количество нулей. Результаты вывести на экран.
 from functools import reduce
 
-# d = int(input('vvod '))
-# user_list = []
-# i = 0
-# while i < d:
-#     st = "vvod " + str(i+1)
-#     user_list.append(input(st))
-#     i += 1
-# print(user_list)
+d = int(input('Введите количество чисел:  '))
+user_list = []
+user_list_1 = []
+user_list_2 = []
+i = 0
+while i < d:
+    st = "Число  - " + str(i+1)
+    user_list.append(input(st))
+    i += 1
+    print('Введенные данные ' ,user_list)
+print(f'Максимальное число в списке - {max(user_list)}')
+print(f'Минимальное число в списке - {min(user_list)}')
+for i in user_list:
+    if i > '0':
+        user_list_1.append(i)
+        print('Положительное число - ', i)
+        # print('Положительное число - ', user_list_1)
+    elif i < '0':
+        # user_list_2.append(i)
+        # print(f'Числа отрицательные -  {user_list_2}')
+        print('Числа отрицательные -', i)
+        # user_list.sort()
+        # print('Числа отрицательные -', user_list[-1])
+    elif i == '0':
+        # print('0 - ', i)
+        print('Количество нулей - ', user_list.count('0'))
 
-# x_1 = int(input('Введите числа : '))
-# print(x_1)
-# print(reduce(lambda a, b: a if a > b else b, x_1))
-# print(reduce(lambda a, b: a if a < b else b, x_1))
 
+# x_1 = input('Введите числа : ')
+# print(type(x_1))
+# print(reduce(max, x_1))
+# print(reduce(min, x_1))
+
+# x_1.sort()
+# print('Наибольшее число: ', x_1[-1])
+# print('Наименьшее число: ', x_1[0])
+
+# x_1_2 = sorted(x_1)
+# print('Наибольшее число: ', x_1_2[-1])
+# print('Наименьшее число: ', x_1_2[0])
