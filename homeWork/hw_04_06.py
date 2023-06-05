@@ -1,8 +1,23 @@
 # Модуль 5. Функци. Часть 3
-
+# https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-13-rekursivnye-funkcii-2023-01-23
 # Задание 1
 # Написать рекурсивную функцию нахождения наи-
 # большего общего делителя двух целых чисел.
+
+def num_recur(a, b):
+    num_min = min(a, b)
+    num_max = max(a, b)
+    if num_min == 0:
+        return num_max
+    elif num_min == 1:
+        return 1
+    else:
+        return num_recur(num_min, num_max % num_min)
+
+a, b = int(input()), int(input())
+num_recur(a, b)
+print(num_recur(a, b))
+
 
 # Задание 2
 # Написать игру «Быки и коровы». Программа «за-
@@ -26,3 +41,4 @@
 # необходимо использовать рекурсию.
 
 # Задание 4. Написать игру «Пятнашки».
+# http://pythonicway.com/python-games/python-arcade/37-python-fifteen

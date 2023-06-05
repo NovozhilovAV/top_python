@@ -46,27 +46,28 @@ user_list_2 = []
 i = 0
 while i < d:
     st = "Число  - " + str(i+1)
-    user_list.append(input(st))
+    user_list.append(int(input(st)))
     i += 1
     print('Введенные данные ' ,user_list)
 print(f'Максимальное число в списке - {max(user_list)}')
 print(f'Минимальное число в списке - {min(user_list)}')
+
 for i in user_list:
-    if i > '0':
+    if i > 0:
         user_list_1.append(i)
         print('Положительное число - ', i)
         # print('Положительное число - ', user_list_1)
-    elif i < '0':
+    elif i < 0:
         # user_list_2.append(i)
         # print(f'Числа отрицательные -  {user_list_2}')
         print('Числа отрицательные -', i)
         # user_list.sort()
         # print('Числа отрицательные -', user_list[-1])
-    elif i == '0':
+    elif i == 0:
         # print('0 - ', i)
-        print('Количество нулей - ', user_list.count('0'))
+        print('Количество нулей - ', user_list.count(0))
 
-# Разобраться с отрицательными числами!!!! неверно выводит
+
 # x_1 = input('Введите числа : ')
 # print(type(x_1))
 # print(reduce(max, x_1))
