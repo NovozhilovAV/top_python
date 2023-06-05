@@ -66,7 +66,7 @@ for i in user_list:
         # print('0 - ', i)
         print('Количество нулей - ', user_list.count('0'))
 
-
+# Разобраться с отрицательными числами!!!! неверно выводит
 # x_1 = input('Введите числа : ')
 # print(type(x_1))
 # print(reduce(max, x_1))
